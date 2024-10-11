@@ -25,7 +25,12 @@ let name = new URL(req.url).searchParams.get("name")
 ```
 To use purely Javascript, just add the `---` to the end of the file.
 
-If you `return` a value from the top block, the rest of the document will be ignored and the return value will be the response sent to the client
+If you `return` a value from the top block, the rest of the document will be ignored and the return value will be the response sent to the client.
+
+If the file doesn't exist, Lemon will look for a `404.lmn` file in the root. If there is none, it will just return 
+```
+Not Found
+```
 
 ## Installation
 To install lemon, run
