@@ -27,4 +27,7 @@ let name = new URL(req.url).searchParams.get("name")
 If you `return` a value from the top block, the rest of the document will be ignored and the return value will be the response sent to the client
 
 ## Installation
-To install lemon, 
+To install lemon, run
+```bash
+deno install -g --allow-net --allow-read --name lemon https://raw.githubusercontent.com/DeviousPear/lemon/refs/heads/main/index.js
+```
