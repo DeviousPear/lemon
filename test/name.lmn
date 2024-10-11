@@ -1,0 +1,5 @@
+let name = new URL(req.url).searchParams.get("name")
+---
+<h1>Hi, ${name}!</h1>
+<h1>Your UA string is: ${req.headers.get("User-Agent")}
+<a href="/back" >Go back</a>

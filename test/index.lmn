@@ -1,0 +1,7 @@
+<body style="display:flex;justify-content:center;align-items:center;height:100vh;flex-direction:column;" >
+    <h1 style="text-align:center;">Please enter your name</h1>
+    <form action="/name">
+        <input type=text placeholder="Your Name" name=name style="padding: 8px;">
+        <input type=submit style="padding: 8px;">
+    </form>
+</body>
