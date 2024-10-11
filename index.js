@@ -14,7 +14,7 @@ async function executeFile(path, req) {
     const fn = new Function("req", `let res = new Response("", {headers: {"Content-Type":"text/html"}});\n${js}\n return new Response(\`${html}\`, res);`)
     return fn(req)
 }
-Deno.serve(req => {
+Deno.serve({ port: Deno.args[0] }, req => {
     const url = new URL(req.url)
     let path = ""
     if (url.pathname == "/") {

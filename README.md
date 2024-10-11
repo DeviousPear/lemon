@@ -23,11 +23,20 @@ let name = new URL(req.url).searchParams.get("name")
 <h1>Your UA string is: ${req.headers.get("User-Agent")}
 <a href="/back" >Go back</a>
 ```
+To use purely Javascript, just add the `---` to the end of the file.
 
 If you `return` a value from the top block, the rest of the document will be ignored and the return value will be the response sent to the client
 
 ## Installation
 To install lemon, run
 ```bash
-deno install -g --allow-net --allow-read --name lemon https://raw.githubusercontent.com/DeviousPear/lemon/refs/heads/main/index.js
+deno install --global --allow-net --allow-read --name lemon https://raw.githubusercontent.com/DeviousPear/lemon/refs/heads/main/index.js
+```
+
+## Running lemon
+Once you've installed lemon, just type `lemon` in your terminal at the project root.
+
+To run on a specific port, add the port to the command like so:
+```bash
+lemon 1234
 ```
