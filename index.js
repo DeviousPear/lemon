@@ -30,7 +30,7 @@ Deno.serve({ port: Deno.args[0] }, req => {
     } else if (url.pathname.endsWith(".lmn") && existsSync("./" + url.pathname)) {
         path = "./" + url.pathname
     } else if (existsSync("./" + url.pathname)) {
-        return new Response(Deno.readTextFileSync(url.pathname), { headers: { "Content-Type": contentType(url.pathname.split(".").pop()) } })
+        return new Response(Deno.readTextFileSync("./" + url.pathname), { headers: { "Content-Type": contentType(url.pathname.split(".").pop()) } })
     } else path = "./404.lmn"
     return executeFile(path, req)
 },)
